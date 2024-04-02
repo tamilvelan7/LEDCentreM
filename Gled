@@ -46,7 +46,10 @@ def send_data():
         # url_text3=url3.read().splitlines()
         # url_text4=url4.read().splitlines()
         ########################################################
-        cmd = 'gled ' + ip_address1 + ' 1 9 "' + data + '" ' + ' ' + effect1
+
+        effect2=current_value_1.get(),current_value_2.get(),current_value_3.get(),current_value_4.get(),current_value_5.get(),current_value_6.get(),current_value_7.get(), current_value_8.get(),current_value_9.get()
+        print(effect2)
+        cmd = 'gled ' + ip_address1 + ' 1 9 "' + data + '" ' + ' ' + effect2
         subprocess.call(cmd, shell=True)
         time.sleep(0.15)
         ########################################################
@@ -106,24 +109,24 @@ file_Entry.place(x=400, y=170, width=220, height=50)
 label_3 = tk.Label(window, text="Window", font=('Arial', 15))
 label_3.place(x=100, y=250)
 
-current_value6 = tk.IntVar(value=0)
+current_value_1 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=1,
     to=10,
-    textvariable=current_value6,
+    textvariable=current_value_1,
     wrap=True)
 spin_box.place(x=400, y=250)
 
 label_4 = tk.Label(window, text="Effect", font=('Arial', 15))
 label_4.place(x=100, y=300)
 
-current_value5 = tk.IntVar(value=0)
+current_value_2 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=1,
     to=10,
-    textvariable=current_value5,
+    textvariable=current_value_2,
     wrap=True)
 
 spin_box.place(x=400, y=300)
@@ -131,12 +134,12 @@ spin_box.place(x=400, y=300)
 label_5 = tk.Label(window, text="Font", font=('Arial', 15))
 label_5.place(x=100, y=350)
 
-current_value4 = tk.IntVar(value=0)
+current_value_3 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=1,
     to=10,
-    textvariable=current_value4,
+    textvariable=current_value_3,
     wrap=True)
 
 spin_box.place(x=400, y=350)
@@ -144,12 +147,12 @@ spin_box.place(x=400, y=350)
 label_6 = tk.Label(window, text="speed", font=('Arial', 15))
 label_6.place(x=100, y=400)
 
-current_value_s = tk.IntVar(value=0)
+current_value_4 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=1,
     to=10,
-    textvariable=current_value_s,
+    textvariable=current_value_4,
     wrap=True)
 
 spin_box.place(x=400, y=400)
@@ -157,12 +160,12 @@ spin_box.place(x=400, y=400)
 label_5 = tk.Label(window, text="Alignment", font=('Arial', 15))
 label_5.place(x=100, y=450)
 
-current_value3 = tk.IntVar(value=0)
+current_value_5 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=1,
     to=10,
-    textvariable=current_value3,
+    textvariable=current_value_5,
     wrap=True)
 
 spin_box.place(x=400, y=450)
@@ -170,12 +173,12 @@ spin_box.place(x=400, y=450)
 label_5 = tk.Label(window, text="Alignment 2", font=('Arial', 15))
 label_5.place(x=100, y=500)
 
-current_value2 = tk.IntVar(value=0)
+current_value_6 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=1,
     to=10,
-    textvariable=current_value2,
+    textvariable=current_value_6,
     wrap=True)
 
 spin_box.place(x=400, y=500)
@@ -183,12 +186,12 @@ spin_box.place(x=400, y=500)
 label_7 = tk.Label(window, text="R", font=('Arial', 15))
 label_7.place(x=100, y=550)
 
-current_value1 = tk.IntVar(value=255)
+current_value_7 = tk.IntVar(value=255)
 spin_box = ttk.Spinbox(
     window,
     from_=0,
     to=255,
-    textvariable=current_value1,
+    textvariable=current_value_7,
     wrap=True)
 
 spin_box.place(x=400, y=550)
@@ -196,12 +199,12 @@ spin_box.place(x=400, y=550)
 label_8 = tk.Label(window, text="G", font=('Arial', 15))
 label_8.place(x=100, y=600)
 
-current_value_B = tk.IntVar(value=0)
+current_value_8 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=0,
     to=255,
-    textvariable=current_value_B,
+    textvariable=current_value_8,
     wrap=True)
 
 spin_box.place(x=400, y=600)
@@ -209,12 +212,12 @@ spin_box.place(x=400, y=600)
 label_9 = tk.Label(window, text="B", font=('Arial', 15))
 label_9.place(x=100, y=650)
 
-current_value = tk.IntVar(value=0)
+current_value_9 = tk.IntVar(value=0)
 spin_box = ttk.Spinbox(
     window,
     from_=0,
     to=255,
-    textvariable=current_value,
+    textvariable=current_value_9,
     wrap=True)
 
 spin_box.place(x=400, y=650)
